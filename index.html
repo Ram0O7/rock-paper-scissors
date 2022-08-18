@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" type="module" defer></script>
   <title>Rock, Paper, Scissors</title>
-   
-</head>
-<body>
-<section>
-  <header>
-    <div class="game-title">
-      <span>ROCK</span><span>PAPER</span><span>SCISSORS</span>
-    </div>
-    <div class="score-card"><span>SCORE</span><span class="score">0</span></div>
-  </header>
-  <main class="home">
-    <div class="game-body">
-      <div class="tri-base">
-      <div  class="choice paper"></div>
-      <div  class="choice scissors"></div>
-      </div>
-    <div  class="choice rock"></div>
-    </div>
-  </main>
-  <!-- result body starts here -->
 
-  <main class="result-body">
-    <div class="game-body game-body-mobil">
-      <div class="tri-base">
-        <div class="my-choice">
-          <span>YOU</span>
-        <div class="choosen"></div>
+</head>
+
+<body>
+  <section>
+    <header>
+      <div class="game-title">
+        <span>ROCK</span><span>PAPER</span><span>SCISSORS</span>
+      </div>
+      <div class="score-card"><span>SCORE</span><span class="score">0</span></div>
+    </header>
+    <main class="home">
+      <div class="game-body">
+        <div class="tri-base">
+          <div class="choice paper"></div>
+          <div class="choice scissors"></div>
         </div>
-        <div class="result result-desk">
-          <h1 class="result-type">YOU LOSE</h1>
-          <button class="play-btn">PLAY AGAIN</button>
+        <div class="choice rock"></div>
+      </div>
+    </main>
+    <!-- result body starts here -->
+
+    <main class="result-body">
+      <div class="game-body game-body-mobil">
+        <div class="tri-base">
+          <div class="my-choice">
+            <span>YOU</span>
+            <div class="choosen"></div>
+          </div>
+          <div class="result result-desk">
+            <h1 class="result-type">YOU LOSE</h1>
+            <button class="play-btn">PLAY AGAIN</button>
+          </div>
+          <div class="c-choice">
+            <span>HOUSE</span>
+            <div class="choosen"></div>
+          </div>
         </div>
-        <div class="c-choice">
-          <span>HOUSE</span>
-        <div class="choosen"></div>
+        <div class="result result-mobil">
+          <h1 class="result-type mobil-result">YOU LOSE</h1>
+          <button class="play-btn mobil-play">PLAY AGAIN</button>
         </div>
       </div>
-      <div class="result result-mobil">
-        <h1 class="result-type mobil-result">YOU LOSE</h1>
-        <button class="play-btn mobil-play">PLAY AGAIN</button>
-      </div>
-    </div>
-  </main>
-  <button class="rule">RULES</button>
+    </main>
+    <button class="rule">RULES</button>
   </section>
 </body>
+
 </html>
