@@ -9,7 +9,7 @@
   body{
     background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     font-family: 'Barlow Semi Condensed', sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     padding: 50px 0;
   }
   .rule{
@@ -186,10 +186,6 @@ button{
   .my-choice,.c-choice{
     gap: 30px;
   }
-  .game-body-mobil{
-    /* gap: 80px; */
-    height: 100%;
-  }
   body{
     padding: 20px;
   }
@@ -229,7 +225,7 @@ main{
 }
 .rule{
   right: 34vw;
-  bottom: 20px;
+  bottom: 5px;
 }
 button{
   cursor: unset;
