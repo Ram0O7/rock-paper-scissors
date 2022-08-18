@@ -190,15 +190,12 @@ button{
     /* gap: 80px; */
     height: 100%;
   }
-  .game-body{
-    justify-content: space-around
-  }
   body{
     padding: 20px;
   }
   
   header{
-    width: 350px;
+    width: 100%;
     height: 120px;
   }
   
@@ -231,8 +228,8 @@ main{
   background-size: 200px;
 }
 .rule{
-  right: 37vw;
-  bottom: 15vw;
+  right: 34vw;
+  bottom: 20px;
 }
 button{
   cursor: unset;
