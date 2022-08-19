@@ -59,10 +59,9 @@ for (let i = 0; i < choice.length; i++) {
             resultBody.style.display = 'flex'
         }
 
-        setTimeout(result,2000);
-        showResult();
-
-        score.innerHTML = scoreCount;
+        setTimeout(showResult, 2000);
+        results.style.display = 'none';
+        draw();
     })
 }
 
@@ -119,9 +118,10 @@ const result = () => {
         draw();
 
     }
+    score.innerHTML = scoreCount;
 }
 
 function showResult() {
-    resultMessage.innerHTML = '(.-_-.)';
-    draw();
+    result();
+    results.style.display = 'flex';
 }
