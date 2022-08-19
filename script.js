@@ -23,6 +23,7 @@ function cWins() {
 }
 function draw() {
     // c.classList.remove(...c.classList);
+    // u.classList.remove(...u.classList);
     c.classList.remove('circles');
     u.classList.remove('circles');
 }
