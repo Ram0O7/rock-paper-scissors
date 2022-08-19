@@ -12,6 +12,9 @@ const resultMessage = document.querySelector('.result-type');
 const u = document.querySelector('.u');
 const c = document.querySelector('.c');
 
+const sound1 = new Audio('mix0.wav');
+const sound2 = new Audio('mix1.wav');
+
 rulebtn.addEventListener('click', () => {
     rules.style.display = 'block';
 })
@@ -44,6 +47,7 @@ const computerChoice = ['rock', 'paper', 'scissors'];
 // writing game logic
 for (let i = 0; i < choice.length; i++) {
     choice[i].addEventListener('click', () => {
+        sound1.play();
 
         let index = Math.floor(Math.random() * 3);
         choosen[1].classList.add('choosen');
@@ -131,6 +135,9 @@ const result = () => {
 }
 
 function showResult() {
+    sound1.pause();
+    sound1.currentTime = 0;
+    sound2.play();
     result();
     results.style.display = 'flex';
 }
