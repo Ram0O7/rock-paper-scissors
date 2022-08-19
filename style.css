@@ -75,8 +75,8 @@ flex-direction: column;
 main,.paper,.rock,.scissors{
   background-repeat: no-repeat;
   background-position: center;
-  height: 160px;
-  width: 160px;
+  height:200px;
+  width: 200px;
   background-color: #ccc;
   border-radius: 50%;
   cursor: pointer;
@@ -101,7 +101,7 @@ main{
   margin-inline: auto;
   background-color: unset;
   background-image: url(images/bg-triangle.svg);
-  background-size: 250px;
+  background-size: 300px;
 }
 .game-body{
   display: flex;
@@ -114,14 +114,17 @@ main{
 .paper{
   border: 20px solid hsl(230, 89%, 62%);
   background-image: url(images/icon-paper.svg);
+  background-size: 60px;
 }
 .rock{
   border: 20px solid hsl(349, 71%, 52%);
   background-image: url(images/icon-rock.svg);
+  background-size: 60px;
 }
 .scissors{
   border: 20px solid hsl(39, 89%, 49%);
   background-image: url(images/icon-scissors.svg);
+  background-size: 60px;
 }
 
 .result-body{
@@ -170,18 +173,59 @@ button{
   color: crimson;
   font-weight: 600;
 }
-.result-mobil{
-  display: none;
+button:hover{
+  color: hsl(229, 64%, 46%);
+}
+
+.choosen{
+  position: relative;
+}
+/* adding ripple effect */
+.circles {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: hsl(229, 25%, 31%);
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.circles::after {
+  content: "";
+  position: absolute;
+  z-index: -3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 140%;
+  height: 140%;
+  background-color: hsla(228, 25%, 31%, 0.652);
+
+}
+
+.circles::before {
+  content: "";
+  position: absolute;
+  z-index: -4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 180%;
+  height: 180%;
+  background-color: hsla(228, 25%, 31%, 0.197);
 }
 
 /* adding responsiveness */
 
 @media (max-width:600px) {
-  .result-desk{
-    display: none;
-  }
-  .result-mobil{
-    display: block;
+  .circles{
+    height: 220px;
+    width: 220px;
   }
   .my-choice,.c-choice{
     gap: 30px;
@@ -211,8 +255,8 @@ button{
   cursor:unset;
   background-size: 40px;
   border-width: 15px;
-  height: 140px;
-  width: 140px;
+  height: 150px;
+  width: 150px;
 }
 .tri-base{
   gap: 40px;
