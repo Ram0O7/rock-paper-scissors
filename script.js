@@ -5,11 +5,19 @@ const resultBody = document.querySelector('.result-body');
 const choice = document.querySelectorAll('.choice');
 const choosen = document.querySelectorAll('.choosen');
 const rules = document.querySelector('.rules');
+const rulebtn = document.querySelector('.rule');
 const start = document.querySelector('.start-again');
 const playBtn = document.querySelector('.play-btn');
 const resultMessage = document.querySelector('.result-type');
 const u = document.querySelector('.u');
 const c = document.querySelector('.c');
+
+rulebtn.addEventListener('click', () => {
+    rules.style.display = 'block';
+})
+rules.addEventListener('click', () => {
+    rules.style.display = 'none';
+})
 
 let scoreCount = 0;
 

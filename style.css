@@ -103,6 +103,7 @@ section{
   background-color: unset;
   background-image: url(images/bg-triangle.svg);
   background-size: 400px;
+  overflow: hidden;
 }
 .game-body{
   display: flex;
@@ -220,10 +221,35 @@ button:hover{
   height: 180%;
   background-color: hsla(228, 25%, 31%, 0.197);
 }
+.rules{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.505);
+}
+.rulecard{
+  background-color: #fff;
+  width: 400px;
+  height: 400px;
+  margin:200px auto;
+  border-radius: 10px;
+  background-image: url(images/image-rules.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  /* box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.505),
+  -10px -10px 40px rgba(0, 0, 0, 0.502); */
+}
 
 /* adding responsiveness */
 
 @media (max-width:600px) {
+  .rulecard{
+    height: 450px;
+    width: 350px;
+    margin: 80px auto;
+  }
   .circles{
     height: 220px;
     width: 220px;
@@ -232,7 +258,7 @@ button:hover{
     gap: 30px;
   }
   body{
-    padding: 20px;
+    padding: 20px 0;
   }
   
   header{
