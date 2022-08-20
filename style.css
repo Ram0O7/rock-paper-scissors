@@ -291,6 +291,10 @@ button:hover{
   height: 150px;
   width: 150px;
 }
+.blank{
+  height: 150px;
+  width: 150px;
+}
 .tri-base{
   gap: 40px;
 }
