@@ -44,27 +44,31 @@ const computer = choosen[1].classList;
 
 const computerChoice = ['rock', 'paper', 'scissors'];
 
+function c_choice() {
+    let index = Math.floor(Math.random() * 3);
+    choosen[1].classList.remove('blank');
+    choosen[1].classList.add(computerChoice[index]);
+}
 // writing game logic
 for (let i = 0; i < choice.length; i++) {
     choice[i].addEventListener('click', () => {
         sound1.play();
 
-        let index = Math.floor(Math.random() * 3);
         choosen[1].classList.add('choosen');
         choosen[0].classList.add('choosen');
 
 
         if (choice[i].classList.contains('rock')) {
             choosen[0].classList.add('rock');
-            choosen[1].classList.add(computerChoice[index]);
+            setTimeout(c_choice,2000);
         }
         if (choice[i].classList.contains('paper')) {
             choosen[0].classList.add('paper');
-            choosen[1].classList.add(computerChoice[index]);
+            setTimeout(c_choice,2000);
         }
         if (choice[i].classList.contains('scissors')) {
             choosen[0].classList.add('scissors');
-            choosen[1].classList.add(computerChoice[index]);
+            setTimeout(c_choice,2000);
         }
 
         if (home.style.display = 'flex') {
@@ -75,6 +79,7 @@ for (let i = 0; i < choice.length; i++) {
         setTimeout(showResult, 2000);
         results.style.display = 'none';
         draw();
+        choosen[1].classList.add('blank');
     })
 }
 

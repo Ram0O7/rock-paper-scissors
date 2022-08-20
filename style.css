@@ -141,6 +141,12 @@ section{
   border-width: 30px;
   background-size: 70px;
 }
+.blank{
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: hsl(214, 47%, 23%);
+}
 .my-choice,.c-choice{
   display: flex;
   flex-direction: column;
@@ -238,8 +244,8 @@ button:hover{
   background-image: url(images/image-rules.svg);
   background-position: center;
   background-repeat: no-repeat;
-  /* box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.505),
-  -10px -10px 40px rgba(0, 0, 0, 0.502); */
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.505),
+  -10px -10px 40px rgba(0, 0, 0, 0.502);
 }
 
 /* adding responsiveness */
